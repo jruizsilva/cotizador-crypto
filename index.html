@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cotizador Crypto</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="icon" href="assets/cryto-favicon.png" />
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/styles.css" />
+	</head>
+	<body>
+		<div class="gradient">
+			<div class="container-form">
+				<header class="header">
+					<h1 class="header__title">Cotizador Cryto</h1>
+				</header>
+				<form action="" class="form" id="form">
+					<div class="form__campo">
+						<select
+							class="form__select"
+							name="moneda"
+							id="moneda"
+							required
+						>
+							<option value="" selected disabled>
+								Elije tu moneda
+							</option>
+							<option value="ARS">Peso Argentino</option>
+							<option value="USD">Dolar Americano</option>
+							<option value="EUR">EURO</option>
+						</select>
+					</div>
+					<div class="form__campo">
+						<select
+							class="form__select"
+							name="crypto"
+							id="crypto"
+							required
+						>
+							<option value="" selected disabled>
+								Elije la criptomoneda
+							</option>
+						</select>
+					</div>
+					<input type="submit" class="form__submit" />
+				</form>
+			</div>
+			<main class="main" id="result"></main>
+		</div>
+		<template id="templatePrice">
+			<div class="price" id="price">
+				<div class="price__header">
+					<p class="price__p">Exchange</p>
+					<p class="price__p" id="exchange"></p>
+				</div>
+				<div class="price__info">
+					<div class="price__div">
+						<p class="price__p">Precio</p>
+						<p class="price__p">
+							$<span id="priceNow"></span
+							><span id="codeMoneda"></span>
+						</p>
+					</div>
+					<div class="price__div">
+						<p class="price__p">Maximo</p>
+						<p class="price__p">
+							$<span id="priceHigh"></span
+							><span id="codeMoneda"></span>
+						</p>
+					</div>
+					<div class="price__div">
+						<p class="price__p">Minimo</p>
+						<p class="price__p">
+							$<span id="priceLow"></span
+							><span id="codeMoneda"></span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</template>
+		<script src="js/app.js" type="module"></script>
+	</body>
+</html>

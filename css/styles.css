@@ -1,0 +1,165 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.spinner::after {
+  content: "";
+  display: block;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 2px solid #01937c;
+  border-left: transparent;
+  animation: girar 1s linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.error {
+  background-color: #ffdcdc;
+  color: #dc6464;
+  border: 1px solid #dc6464;
+  border-radius: 5px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 17px;
+  font-size: 16px;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-image: url(../assets/background.jpg);
+  background-size: cover;
+}
+
+.gradient {
+  background: rgba(15, 32, 39, 0.6);
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, rgba(44, 83, 100, 0.6), rgba(32, 58, 67, 0.6), rgba(15, 32, 39, 0.6));
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  width: 100%;
+  min-height: 100vh;
+  padding: 24px 0;
+}
+
+.container-form,
+.main {
+  max-width: 640px;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.main {
+  margin-bottom: 0;
+}
+
+.header {
+  background-color: #01937c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+}
+
+.header .header__title {
+  color: white;
+  font-size: 18px;
+}
+
+.form,
+.price {
+  background-color: #ddd;
+  padding: 24px;
+}
+
+.form__campo {
+  margin-bottom: 8px;
+}
+
+.form__label {
+  font-size: 16px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.form__select {
+  width: 100%;
+  height: 48px;
+  padding: 8px 10px;
+  font-family: inherit;
+  background-color: rgba(250, 241, 230, 0.8);
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form__select:focus {
+  border-radius: 0;
+  outline: 2px solid #01937c;
+}
+
+.form__submit {
+  display: block;
+  width: 100%;
+  height: 48px;
+  background-color: #01937c;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-family: inherit;
+  margin-top: 24px;
+}
+
+.form__submit:hover {
+  cursor: pointer;
+}
+
+.price__div,
+.price__header {
+  height: 68px;
+  padding: 10px;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.price__header {
+  border-bottom: 2px solid #01937c;
+}
+
+.price__div:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+.price__p:first-child {
+  margin-bottom: 4px;
+}
+/*# sourceMappingURL=styles.css.map */
